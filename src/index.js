@@ -4,7 +4,7 @@ const cashGiven = document.querySelector("#cash-given");
 const button = document.querySelector("#return-change");
 const out = document.querySelector("#output");
 
-const notes = [2000, 500, 200, 100, 50, 20, 1];
+const notes = [2000, 500, 200, 100, 50, 20, 10, 1];
 const notes_area = document.querySelectorAll(".number-of-notes");
 button.addEventListener("click", function calculateAmountToBeReturned() {
   if (billAmount.value > 0) {
