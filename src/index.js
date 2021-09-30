@@ -8,7 +8,7 @@ const notes = [2000, 500, 200, 100, 50, 20, 10, 1];
 const notes_area = document.querySelectorAll(".number-of-notes");
 button.addEventListener("click", function calculateAmountToBeReturned() {
   if (billAmount.value > 0) {
-    if (cashGiven.value <= billAmount.value) {
+    if (cashGiven.value >= billAmount.value) {
       let amountToBeReturned = cashGiven.value - billAmount.value;
       console.log(amountToBeReturned);
       calculateChange(amountToBeReturned);
