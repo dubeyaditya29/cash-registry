@@ -7,18 +7,19 @@ const out = document.querySelector("#output");
 const notes = [2000, 500, 200, 100, 50, 20, 10, 1];
 const notes_area = document.querySelectorAll(".number-of-notes");
 button.addEventListener("click", function calculateAmountToBeReturned() {
-  if (billAmount.value > 0) {
-    if (cashGiven.value >= billAmount.value) {
-      let amountToBeReturned = cashGiven.value - billAmount.value;
-      console.log(amountToBeReturned);
-      calculateChange(amountToBeReturned);
+  console.log(billAmount.value);
+  console.log(cashGiven.value);
+  if (billAmount !== "" && cashGiven !== "") {
+    if (billAmount.value > 0 && cashGiven.value > 0) {
+      let returnedAmt = cashGiven.value - billAmount.value;
+      calculateChange(returnedAmt);
     } else {
       out.style.display = "block";
-      out.innerText = "given amount should always be greater";
+      out.innerText = "bill Amt or cash given should be greater than 0";
     }
   } else {
     out.style.display = "block";
-    out.innerText = "Noting to pay!";
+    out.innerText = "Please enter a legit value";
   }
 });
 
